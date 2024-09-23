@@ -1,5 +1,5 @@
-import { setMissile } from "../rules/setMissile";
-import { validateClick } from "../utils/validateClickPosition";
+import { setMissile } from "../rules/setMissile.js";
+import { validateClick } from "../utils/validateClickPosition.js";
 
 export function setMissiles(e) {
     console.log("Estoy poniendo misiles");

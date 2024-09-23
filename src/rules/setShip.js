@@ -1,15 +1,16 @@
-import { Ship } from "../entities/Ship";
-import { validatePositionShip } from "./validatePositionShip";
-import { validateShip } from "./validateShip";
+import { Ship } from "../entities/Ship.js";
+import { validatePositionShip } from "./validatePositionShip.js";
+import { validateShip } from "./validateShip.js";
+import { calculateLargeShip } from "../utils/calculateLargeShip.js"; 
 
-export function setShip(position, cellsOfShips, shipsOf, type) {
+export function setShip(position, cellsOfShips, shipsOf, type, boardSelected, cellSize) {
   if (position) {
 
     const ship = new Ship (position, type);
 
-    const largeOfShip = Ship.largeShip(ship);
-
-    if (validatePositionShip(largeOfShip)) {
+    const largeOfShip = calculateLargeShip(ship, cellSize);
+    
+    if (validatePositionShip(largeOfShip, boardSelected)) {
       if (!validateShip(largeOfShip, cellsOfShips)) {
 
         cellsOfShips.push(...largeOfShip);

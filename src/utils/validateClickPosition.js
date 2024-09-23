@@ -1,4 +1,4 @@
-export function validateClick(e, boardSelected, board) {
+export function validateClick(e, boardSelected, board, canvas, cellSize) {
     const rect = canvas.getBoundingClientRect();
     const scaleX = board.width / rect.width;
     const scaleY = board.height / rect.height;

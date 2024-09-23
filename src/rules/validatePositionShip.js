@@ -1,12 +1,7 @@
-export function validatePositionShip(positionsOfShip) {
-
-  let maxWidth = canvas.width / 2;
-
-  let maxHeight = canvas.height;
-
+export function validatePositionShip(positionsOfShip, boardSlected) {
   let bandera = false;
   positionsOfShip.forEach((position) => {
-    if (position.x < maxWidth && position.y < maxHeight) {
+    if (position.x < boardSlected.maxWidth && position.y < boardSlected.maxHeight) {
       bandera = true;
     } else {
       bandera = false;

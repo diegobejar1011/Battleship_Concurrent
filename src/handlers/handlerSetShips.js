@@ -1,6 +1,6 @@
-import { setMissiles } from "./handlerSetMissile";
-import { setShip } from "../rules/setShip";
-import { validateClick } from "../utils/validateClickPosition";
+import { setMissiles } from "./handlerSetMissile.js";
+import { setShip } from "../rules/setShip.js";
+import { validateClick } from "../utils/validateClickPosition.js";
 
 export function setShips(e) {
     if(shipsOfPlayer.length == 4){

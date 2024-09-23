@@ -7,10 +7,36 @@
     <link rel="stylesheet" href="./src/assets/style/index.css">
 </head>
 <body>
+    
     <div id="container-board">
+        <h1 id="title-image">Battleship</h1>
+        <button id="openModal" class="myButton" >¿Cómo jugar?</button>
+        <div class="container-subtitle">
+            <h2 class="player">Tu tablero</h2>
+            <h2 class="enemy">Tablero enemigo</h2>
+        </div>
         <canvas width="900" height="450" id="board"></canvas>
-        <button class="wave-btn"><span>Start</span></button>
+        <a  href="#" class="myButton" id="start-button" onclick="startGame()">Iniciar</a>
     </div>
+    
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Battleship es un juego de estrategia naval para dos jugadores. Cada jugador tiene un tablero oculto donde coloca sus barcos, y el objetivo es descubrir y hundir todos los barcos del oponente antes de que él hunda los tuyos.</p>
+            <ul>
+                <li>Coloca tus barcos en las casillas de tu parte del tablero.</li>
+                <li>Apuntar misiles en las casillas de la parte del enemigo.</li>
+                    <ul>
+                        <li>Si hay un barco, el disparo marca la casilla con una explosión.</li>
+                        <li>Si no hay barco, el disparo marca la casilla con humo.</li>
+                        <li>Un barco se considera hundido cuando todas sus casillas han sido alcanzadas. En este caso son 3 casillas.</li>
+                    </ul>
+                <li>El primero en derribar las embarcaciones del enemigo, es el ganador.</li>
+            </ul>
+        </div>
+    </div>
+
     <script type="module" src="./index.js"></script>
 </body>
 </html>

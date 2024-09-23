@@ -1,7 +1,7 @@
 export const drawBoard = (board, boardPlayer, cellSize, ctx) => {
   let widthBoard = board.width;
   let heightBoard = board.height;
-  let widthBoardPlayer = boardPlayer;
+  let widthBoardPlayer = boardPlayer.maxWidth;
 
   let numCols = widthBoardPlayer / cellSize;
   let numFils = heightBoard / cellSize;
