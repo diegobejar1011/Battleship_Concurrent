@@ -1,12 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 #container-board {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    display: flex;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+  background-image: url('../img/Battlemap.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #board {
-    margin: auto;
-    align-self: center;
-    border: 1px #000 solid;
+  border: 1px #fff solid;
+}
+
+button {
+  margin-bottom: 40px; 
 }
