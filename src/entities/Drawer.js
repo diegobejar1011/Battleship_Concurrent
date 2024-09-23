@@ -5,7 +5,7 @@ export class Drawer {
             img.src = src;
             return img;
         }),
-        ships: ["src/assets/img/player.png", "src/assets/img/enemy.png"].map((src) => {
+        ships: ["src/assets/img/Player.png", "src/assets/img/Enemy.png"].map((src) => {
             const img = new Image();
             img.src = src;
             return img;
